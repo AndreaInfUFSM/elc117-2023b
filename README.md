@@ -1,0 +1,1 @@
+- [02](https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/02/README.md)
