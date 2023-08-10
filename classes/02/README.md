@@ -128,9 +128,58 @@ Por exemplo:
 - Que paradigmas elas seguem?
 - Você reconhece termos vistos nesta aula?
 
+### Mini-quiz
+
+Go é uma linguagem de programação funcional
+
+- [( )] Sim
+- [(X)] Não
+
+
+
+### Classroom
+
+> No menu "Share" no topo à direita, ative a opção Classroom conforme orientações em aula.
+
+
+Rust é uma linguagem com suporte à programação concorrente
+
+- [(sim)] Sim
+- [(nao)] Não
+
+O que você descobriu sobre Clojure?
+
+    [[___ ___ ___ ___]]
 
 ## Bibliografia
 
 
 
-- Sebesta, Robert. Conceitos de Linguagens de Programação. Bookman, 2018. Disponível no Portal de E-books da UFSM: http://portal.ufsm.br/biblioteca/leitor/minhaBiblioteca.html
+                 {{0}}
+************************************************
+
+Básica
+
+Sebesta, Robert. Conceitos de Linguagens de Programação. Bookman, 2018. Disponível no Portal de E-books da UFSM: http://portal.ufsm.br/biblioteca/leitor/minhaBiblioteca.html
+
+************************************************
+
+              --{{0}}--
+Este livro do Sebesta é uma referência clássica na área. É uma boa fonte para aspectos teóricos sobre as linguagens. Cada capítulo sobre um paradigma traz uma visão geral e depois tem seções focadas em algumas linguagens que suportam o paradigma. Não é uma boa referência para apoiar as práticas com uma linguagem, mas sim para você exercitar leitura e reflexão sobre o que está aprendendo.
+
+
+
+                 {{1}}
+************************************************
+
+Complementar
+
+- https://en.wikipedia.org/wiki/Programming_paradigm
+- https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms
+
+************************************************
+
+              --{{1}}--
+É sempre bom conhecer o que a Wikipedia diz sobre os assuntos que você está estudando. Você não precisa ler/aceitar todo o conteúdo, mas aproveite que está acessível e que costuma ser revisado por pessoas que se interessam e entendem do assunto.
+
+
