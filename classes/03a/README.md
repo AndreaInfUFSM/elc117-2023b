@@ -29,6 +29,12 @@ https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfU
 
 
 
+Um artigo para iniciar: 
+
+*O que é programação funcional e o que isso tem a ver com o Nubank?*
+
+https://blog.nubank.com.br/programacao-funcional-o-que-e-relacao-nubank/
+
 
 ## Programação imperativa X declarativa
 
