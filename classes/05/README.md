@@ -469,7 +469,7 @@ O tipo do argumento `n` é `Int` e do argumento `c` é `Char`. Assim, o segundo 
 
 **ATENÇÃO!!!**
 
-> Esta parte deverá ser feita junto com toda turma, seguindo as instruções da professora para uso do recurso Classroom.
+> Esta parte **não tem correção automática** e deve ser feita em aula, junto com toda a turma! Você deverá responder depois de entrar no Classroom deste material de aula, conforme instruções da professora.
 
 
 {{1}}
@@ -480,8 +480,8 @@ A função `toUpper :: Char -> Char` está definida em um módulo padrão do GHC
 Suponha que você tenha a String "Paradigmas" e queira obter "PARADIGMAS" (tudo em maiúsculas). Qual o código em Haskell que faz isso?
 
 
-- [( )] toUpper "Paradigmas"
-- [( )] map toUpper "Paradigmas"
+- [(a)] a) toUpper "Paradigmas"
+- [(b)] b) map toUpper "Paradigmas"
 
 
 ********************************************************************************
@@ -492,9 +492,9 @@ Suponha que você tenha a String "Paradigmas" e queira obter "PARADIGMAS" (tudo 
 
 Qual será o resultado de `filter (> pi) [1.5, 2.5, 3.5, 4.5]`?
 
-- [( )] [2.5,3.5,4.5,5.5]
-- [( )] [3.5,4.5]
-- [( )] []
+- [(a)] a) [2.5,3.5,4.5,5.5]
+- [(b)] b) [3.5,4.5]
+- [(c)] c) []
 
 
 ********************************************************************************
@@ -507,9 +507,9 @@ Qual será o resultado de `filter (> pi) [1.5, 2.5, 3.5, 4.5]`?
 Suponha que você tenha uma lista de nomes (por exemplo,`["Fulano", "Beltrano"]`) e queira obter todos os nomes em maiúsculas (`["FULANO", "BELTRANO"]`).  Qual o código em Haskell que faz isso?
 
 
-- [( )] `filter toUpper ["Fulano", "Beltrano"]`
-- [( )] `map (map toUpper) ["Fulano", "Beltrano"]`
-- [( )] `map toUpper ["Fulano", "Beltrano"]`
+- [(a)] a) `filter toUpper ["Fulano", "Beltrano"]`
+- [(b)] c) `map toUpper ["Fulano", "Beltrano"]`
+- [(c)] b) `map (map toUpper) ["Fulano", "Beltrano"]`
 
 
 ********************************************************************************
@@ -528,10 +528,18 @@ Agora suponha uma lista de presenças de uma turma inteira:
 Qual dos códigos abaixo obtém a quantidade de alunos presentes?
 
 
-- [( )] `length (filter (\(n,p) -> p) [("Fulano",True),("Beltrano",False)])`
-- [( )] `length (map (\(n,p) -> p) [("Fulano",True),("Beltrano",False)])`
+- [(a)] a) `length (filter (\(n,p) -> p) [("Fulano",True),("Beltrano",False)])`
+- [(b)] b) `length (map (\(n,p) -> p) [("Fulano",True),("Beltrano",False)])`
 
 
 ********************************************************************************
 
-
+{{5}}
+Você ficou com dúvida? Ou não estava na aula?
+ <details>
+  <summary>Gabarito</summary>
+  <p>1b: Você precisa usar map para aplicar toUpper a cada caracter da String</p>
+  <p>2a: Este filter aplica a condição (> pi) a cada elemento da lista, selecionando 3.5 e 4.5, que são maiores que 3.14159</p>
+  <p>3c: Note que toUpper se aplica a um único Char. Uma String é uma lista de Char, ou seja [Char]. Aqui neste exemplo, temos uma lista de String, ou seja [String] ou [[Char]]. Por isso, o (map toUpper) mais interno corresponde a uma conversão de uma única String para maiúscula, e o map mais externo aplica o map interno a cada String da lista de String.</p>
+  <p>4a: Para selecionar os alunos presentes, aplicamos filter. O resultado será uma lista somente com alunos presentes (p == True), que será passada para length, que retornará o número de elementos. A condição neste filter usa uma sintaxe desconhecida até então, mas note que conhecer isso não é imprescindível para resolver esta questão, pois a única diferença entre as opções é o uso de map ou filter.</p>    
+</details> 
