@@ -686,13 +686,13 @@ ghci> map (\x -> x * x) [1,2,3]
 
    Qual será o resultado de:
    
-   `last (filter (>10) (squareAll [2, 3, 4]))`
+   `last (filter (>10) (squareAll [2, 3, 4]))` ?
 
    [[16]]
 
    Qual será o resultado de:
 
-   `sum (filter (\x -> square x > 10 && square x < 30) [1, 2, 3, 4, 5, 6])`
+   `sum (filter (\x -> square x > 10 && square x < 30) [1, 2, 3, 4, 5, 6])` ?
 
    [[9]]
 
@@ -712,7 +712,7 @@ ghci> map (\x -> x * x) [1,2,3]
 
    Qual será o resultado de: 
 
-   `length (filter (\x -> not (isDoctor x)) ["Dr. Jekyll", "Dr. Octopus"])`
+   `length (filter (\x -> not (isDoctor x)) ["Dr. Jekyll", "Dr. Octopus"])` ?
 
    [[0]]
 
