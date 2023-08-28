@@ -3,3 +3,4 @@
 - [03b](https://liascript.github.io/nightly/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/03b/README.md)
 - [05](https://liascript.github.io/nightly/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/05/README.md)
 - [06](https://liascript.github.io/nightly/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/06/README.md)
+- [07](https://liascript.github.io/nightly/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/07/README.md)
