@@ -414,7 +414,7 @@ main = do
 
 ### Exemplo: isValidEmail
 
-Validação de String representando email:
+Validação de String representando email (validação muito simples, apenas para ilustrar uso do `let`):
 
 ``` haskell
 isValidEmail :: String -> Bool
@@ -490,7 +490,7 @@ main = do
 
 ### Exemplo: isValidEmail
 
-Validação de String representando email:
+Validação de String representando email (validação muito simples, apenas para ilustrar uso do `where`)::
 
 ``` haskell
 isValidEmail :: String -> Bool
