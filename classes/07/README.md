@@ -534,22 +534,23 @@ Cadastro de Pessoas Físicas (CPF)
 Procedimento:
 
 1. Multiplicar cada um dos 9 primeiros dígitos por um valor multiplicador correspondente, iniciando em 10 ([10,9..2])
-2. Calcular o somatório = `2*10 + 2*9 + 2*8 + 3*7 + 3*6 + 3*5 + 4*4 + 4*3 + 4*2` = `20+18+16+21+18+15+16+12+8` = 144
-3. Calcular resto da divisão por 11: `144 % 11` = 1
-4. Ajustar o valor:  DV1 = `if DV1 < 2 then 0 else 11-DV1` = 0
+2. Calcular o somatório das multiplicações. Neste exemplo: `2*10 + 2*9 + 2*8 + 3*7 + 3*6 + 3*5 + 4*4 + 4*3 + 4*2` = `20+18+16+21+18+15+16+12+8` = 144
+3. Calcular resto da divisão do somatório por 11. Neste exemplo: `144 % 11` = 1
+4. Ajustar o dígito aplicando esta condição:  `DV1 = if DV1 < 2 then 0 else 11-DV1`. Neste exemplo, DV1 será 0
 
 
 
 ### Segundo dígito
 
-![Imagem de uma tabela semelhante à do slide anterior, com uma coluna a mais, para ilustranr o processo de cálculo do segundo dígito verificador. A primeira linha contém os dígitos do CPF, sendo que na última coluna foi acrescido o dígito verificador calculado anteriormente, que no caso era "0". Na segunda linha, que contém os multiplicadores, os valores agora iniciam em 11 e não mais em 10,  ou seja, os multiplicadores serão [11, 10 .. 2]. Na terceira linha, temos os resultados das multiplicações. O restante do procedimento é novamente descrito textualmente.](img/cpfdv2.png)
+
+![Imagem de uma tabela semelhante à do slide anterior, com uma coluna a mais, para ilustranr o processo de cálculo do segundo dígito verificador. A primeira linha contém os dígitos do CPF, sendo que na última coluna foi acrescido o dígito verificador calculado anteriormente, que no caso era "0". Na segunda linha, que contém os multiplicadores, os valores agora iniciam em 11 e não mais em 10,  ou seja, os multiplicadores serão 11, 10 .. 2. Na terceira linha, temos os resultados das multiplicações. O restante do procedimento é novamente descrito textualmente.](img/cpfdv2.png)
 
 Procedimento:
 
 1. Multiplicar cada um dos 10 primeiros dígitos (incluindo o primeiro verificador) por um valor multiplicador correspondente, iniciando em 11 ([11,10..2])
-2. Calcular o somatório = `2*11 + 2*10 + 2*9 + 3*8 + 3*7 + 3*6 + 4*5 + 4*4 + 4*3 + 0*2` = `22+20+18+24+21+18+20+16+12+8+0` = 171
-3. Calcular resto da divisão por 11: `171 % 11` = 6
-4. Ajustar o valor:  DV2 = `if DV2 < 2 then 0 else 11-DV2` = 5
+2. Calcular o somatório das multiplicações. Neste exemplo: `2*11 + 2*10 + 2*9 + 3*8 + 3*7 + 3*6 + 4*5 + 4*4 + 4*3 + 0*2` = `22+20+18+24+21+18+20+16+12+8+0` = 171
+3. Calcular resto da divisão do somatório por 11. Neste exemplo: `171 % 11` = 6
+4. Ajustar o dígito aplicando esta condição:  `DV2 = if DV2 < 2 then 0 else 11-DV2`. Neste exemplo, DV2 será 5
 
 
 
