@@ -411,6 +411,7 @@ Deduções?!
 
   - Um produto: https://www.ibm.com/watson
   - Bastidores: https://www.cs.nmsu.edu/ALP/2011/03/natural-language-processing-with-prolog-in-the-ibm-watson-system/
+  - Uma discussão atual: https://www.linkedin.com/pulse/chatgpt-v-ibm-watson-jeopardy-cass-sapir/
 
 ### Origens
 
@@ -447,13 +448,17 @@ Usaremos o SWI-Prolog online no Repl.it.
 
 Instruções:
 
-- Clique no botão Run e aguarde aparecer o prompt do shell no Linux
-- Digite `swipl main.pl` para abrir o programa `main.pl` no interpretador de comandos do SWI-Prolog
+- O link para o Repl.it está mais abaixo, mas termine de ler estas instruções antes de clicar nele
+- Na página do Repl.it, clique no botão Run e aguarde aparecer o prompt do shell no Linux
+- No shell, digite `swipl main.pl` para abrir o programa `main.pl` no interpretador de comandos do SWI-Prolog
 - No prompt do SWI-Prolog, digite consultas conforme os exemplos das próximas seções. Por exemplo:
 
   ```
   ?- inteligente(diana).
   ```
+- Para visualizar o código, clique no botão `<>`. 
+- Para modificar o código, é preciso fazer Fork.
+
 
 Repl.it: 
 
@@ -693,35 +698,35 @@ false.
 
 1. Um programa em Prolog precisa conter um "main" para ser executado, como em C?
 
-- [( )] Sim
-- [(x)] Não
-******************************************************
+   - [( )] Sim
+   - [(x)] Não
+    ******************************************************
 
-Não, a execução de um programa em Prolog se dá a partir de uma consulta usando um predicado que pode ter qualquer nome. 
+    Não, a execução de um programa em Prolog se dá a partir de uma consulta usando um predicado que pode ter qualquer nome. 
 
-*******************************************************
+    *******************************************************
 
 2. Se você digitar `swipl prog.pl` no Shell, o programa `prog.pl` vai ser carregado no interpretador SWI-Prolog. Depois disso, o programa irá executar automaticamente?
 
-- [( )] Sim
-- [(x)] Não
-******************************************************
+   - [( )] Sim
+   - [(x)] Não
+    ******************************************************
 
-Não, a execução do programa se dá a partir de uma consulta digitada no interpretador.
+    Não, a execução do programa se dá a partir de uma consulta digitada no interpretador.
 
-*******************************************************
+    *******************************************************
 
 
 
 3. Qual das opções abaixo é uma linha de código válida e completa em Prolog?
 
-- [( )] `idoso(X) :- idade(X, I), I >= 65`
-- [(x)] `avo(X,Z) :- mae(X,Y), mae(Y,Z).`
-******************************************************
+   - [( )] `idoso(X) :- idade(X, I), I >= 65`
+   - [(x)] `avo(X,Z) :- mae(X,Y), mae(Y,Z).`
+    ******************************************************
 
-A primeira opção não está completa porque falta o ponto final.
+    A primeira opção não está completa porque falta o ponto final.
 
-*******************************************************
+    *******************************************************
 
 
 
@@ -735,9 +740,9 @@ female(lily).
 parent_of(jess, simon).
 parent_of(lily, harry).
 parent_of(james, harry).
-father_of(X,Y):- male(X),
+father_of(X,Y) :- male(X),
     parent_of(X,Y).
-mother_of(X,Y):- female(X),
+mother_of(X,Y) :- female(X),
     parent_of(X,Y).
 ```
 
@@ -749,7 +754,7 @@ mother_of(X,Y):- female(X),
 - [( )] 4 fatos e 7 regras
 ******************************************************
 
-As 7 primeiras linhas contêm fatos (verdades incondicionais). As linhas seguintes contêm 2 regras, definidas com quebra de linha.
+As 7 primeiras linhas contêm fatos (verdades incondicionais). As linhas seguintes contêm 2 regras, com lado esquerdo e lado direito separado por `:-`, definidas com quebra de linha.
 
 *******************************************************
 
@@ -762,10 +767,11 @@ Na sequência, dois exemplos clássicos com Prolog.
 
 ### Prolog e Árvores Genealógicas
 
-Um exercício clássico em Prolog:
+Expressar relações de parentesco com fatos e regras é um exemplo clássico em Prolog:
 
-- Fatos e regras representando árvores genealógicas: https://www.101computing.net/prolog-family-tree/
-
+- https://www.101computing.net/prolog-family-tree/
+- https://www.educba.com/prolog-family-tree/
+- https://www.tutorialspoint.com/prolog/prolog_relations.htm
 
 Atualização para novos contextos:
 
