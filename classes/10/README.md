@@ -688,6 +688,73 @@ A = 78.53981633974483.
 false.
 ```
 
+## Quiz
+
+
+1. Um programa em Prolog precisa conter um "main" para ser executado, como em C?
+
+- [( )] Sim
+- [(x)] Não
+******************************************************
+
+Não, a execução de um programa em Prolog se dá a partir de uma consulta usando um predicado que pode ter qualquer nome. 
+
+*******************************************************
+
+2. Se você digitar `swipl prog.pl` no Shell, o programa `prog.pl` vai ser carregado no interpretador SWI-Prolog. Depois disso, o programa irá executar automaticamente?
+
+- [( )] Sim
+- [(x)] Não
+******************************************************
+
+Não, a execução do programa se dá a partir de uma consulta digitada no interpretador.
+
+*******************************************************
+
+
+
+3. Qual das opções abaixo é uma linha de código válida e completa em Prolog?
+
+- [( )] `idoso(X) :- idade(X, I), I >= 65`
+- [(x)] `avo(X,Z) :- mae(X,Y), mae(Y,Z).`
+******************************************************
+
+A primeira opção não está completa porque falta o ponto final.
+
+*******************************************************
+
+
+
+4. Quantos fatos e quantas regras compõem o programa Prolog abaixo?
+
+``` prolog
+male(simon).
+male(harry).
+female(jess).
+female(lily).
+parent_of(jess, simon).
+parent_of(lily, harry).
+parent_of(james, harry).
+father_of(X,Y):- male(X),
+    parent_of(X,Y).
+mother_of(X,Y):- female(X),
+    parent_of(X,Y).
+```
+
+- [( )] 5 fatos e 2 regras
+- [( )] 2 fatos e 5 regras
+- [(x)] 7 fatos e 2 regras
+- [( )] 2 fatos e 7 regras
+- [( )] 7 fatos e 4 regras
+- [( )] 4 fatos e 7 regras
+******************************************************
+
+As 7 primeiras linhas contêm fatos (verdades incondicionais). As linhas seguintes contêm 2 regras, definidas com quebra de linha.
+
+*******************************************************
+
+
+
 
 ## Curiosidades
 
