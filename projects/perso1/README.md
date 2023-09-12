@@ -89,7 +89,7 @@ Veja a seguir o detalhamento destas entregas.
 
 ### Proposta
 
-Até dia 18/09, você deve entregar sua proposta no Moodle (na tarefa "Produção individual personalizada - Bim 1"), contendo:
+Até dia 18/09, você deve entregar sua proposta no Moodle (na tarefa "Proposta de produção individual personalizada - 1"), contendo:
 
 - Descrição objetiva do que você se propõe a realizar, indicando linguagem e ambiente de desenvolvimento/execução escolhidos. A proposta deve ter um grau de dificuldade que avance o conhecimento já demonstrado na disciplina.
 - Proposta de prazo: 1, 2 ou mais semanas, de acordo com o grau de dificuldade estimado
@@ -98,10 +98,12 @@ Até dia 18/09, você deve entregar sua proposta no Moodle (na tarefa "Produçã
 ### Repositório
 
 1. Você deve criar um repositório público para armazenar a documentação e o(s) código(s). Pode ser no Repl.it (desvinculado das práticas no Teams), no GitHub, etc.
-2. O repositório deverá conter um arquivo README.md, formatado em Markdown e estruturado em seções, explicando o que faz o código, como executá-lo, e documentando o 
-processo de desenvolvimento. A documentação deve incluir muitas referências a fontes consultadas, além de comentários e reflexões sobre suas escolhas, seus erros e seus acertos.
+2. O repositório deverá conter um arquivo README.md, formatado em Markdown e estruturado em seções, explicando o que faz o código, como executá-lo, e documentando o processo de desenvolvimento. A documentação deve incluir muitas referências a fontes consultadas, além de comentários e reflexões sobre suas escolhas, seus erros e seus acertos. O README.md também deve conter o link para o screencast.
 
+Bibliografia sobre Markdown: 
 
+- https://www.markdownguide.org/
+- https://livreeaberto.com/guia-markdown
 
 
 ### Screencast
