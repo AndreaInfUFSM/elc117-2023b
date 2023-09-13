@@ -305,8 +305,11 @@ CodeRunner.send(
 <!--
 nvm use v14.21.1
 liascript-devserver --input README.md --port 3001 --live
-https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/10/README.md
+https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/11/README.md
 -->
+
+
+
 
 # Programação Lógica
 
@@ -792,4 +795,3 @@ Atualização para novos contextos:
 
 - Patrick Blackburn, Johan Bos, and Kristina Striegnitz. [Learn Prolog Now](http://www.learnprolognow.org).
 - Markus Triska. [The Power of Prolog](https://www.metalevel.at/prolog).
-
