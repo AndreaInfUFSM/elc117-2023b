@@ -316,7 +316,7 @@ https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfU
 
 
 
-> Este material é uma introdução ao paradigma de **programação lógica** em linguagem Prolog.
+> Este material é parte de uma introdução ao paradigma de **programação lógica** em linguagem Prolog.
 >
 > O conteúdo tem partes interativas e pode ser visualizado de vários modos usando as opções no topo da página.
 
@@ -324,17 +324,24 @@ https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfU
 
 
 - Internamente, Prolog organiza a base de fatos e regras em uma estrutura de dados em árvore
-- Execução Prolog: busca em profundidade na base de fatos e regras para verificar se uma proposição é verdadeira
+- Execução de um programa Prolog é 
 
-Depth-first search
+  - uma busca em profundidade (depth-first search) na base de fatos e regras
+  - para verificar se uma proposição é verdadeira
+  - com instanciação de valores para variáveis
 
-### Mecanismos
+
+
+### Mecanismos da execução
 
 - Unificação (matching): busca com instanciação de valores para variáveis
 
 - Retrocesso (backtracking): refaz unificação seguindo outra possibilidade (outro ramo não vistado na árvore)
 
 - Corte (cut, !): impede backtracking
+
+
+
 
 ### Execução passo-a-passo
 
@@ -348,25 +355,27 @@ Em SWI-Prolog:
 
 Para visualizar os processos de unificação e backtracking em ação, podemos ativar a execução passo-a-passo no SWI-Prolog.
 
+### Call-Exit-Redo-Fail
 
-## Exemplo
+Na execução passo-a-passo, pode acontecer
+
+- Call: busca predicado e argumentos na base
+- Exit: conseguiu unificar (true), volta da busca
+- Redo: refaz a busca (backtrack)
+- Fail: não conseguiu unificar (false), volta da busca
 
 
-Vamos usar um exemplo que está no github da disciplina: fatos e regras sobre Simpsons e Flintstones :-)
 
+## Exemplos
 
-?- ['simpsons-flintstones.pl'].
-true.
-?- listing([female,male,parent,father]).
+Fatos e regras sobre 2 famílias "famosas": Os Flintstones e Os Simpsons
 
-Vamos fazer a execução passo-a-passo do programa simpsons-flintstones.pl, que está no github da disciplina -> praticas -> prolog
-
-```
+``` prolog
 female(marge).
 female(lisa).
 female(maggie).
 female(wilma).
-female(pebbles). 
+female(pebbles). % pedrita :-)
 male(homer).
 male(bart).
 male(fred).
@@ -380,13 +389,13 @@ parent(homer, maggie).
 parent(wilma, pebbles).
 parent(fred, pebbles).
 
-father(X, Y) :- 
-  parent(X, Y), 
-  male(X).
-
 mother(X, Y) :- 
   parent(X, Y), 
   female(X).
+  
+father(X, Y) :- 
+  parent(X, Y), 
+  male(X).
   
 son(X, Y) :- 
   parent(Y, X), 
@@ -395,40 +404,233 @@ son(X, Y) :-
 daughter(X, Y) :- 
   parent(Y, X), 
   female(X).
-
 ```
 
 ### Consulta com busca em fato
 
-```
-?- trace.
-true
-
-?- male(X).
-```
-
-- Fato: male
-- Variável X na busca é substituída por nome interno ( ex: _6368)
+- Fato: `male`
+- Variável X na busca é substituída por nome interno, diferente a cada execução ( ex: _4814)
 - Call: busca na base
 - Exit: deu match, volta da busca
 - Redo: refaz a busca
 
-> usamos ";"/Next  para forçar Redo
+> Aqui usamos ";"/Next  para forçar Redo
+
+
+```
+?- trace.
+true.
+
+[trace]  ?- male(X).
+   Call: (8) male(_4014) ? creep
+   Exit: (8) male(homer) ? creep
+X = homer ;
+   Redo: (8) male(_4014) ? creep
+   Exit: (8) male(bart) ? creep
+X = bart ;
+   Redo: (8) male(_4014) ? creep
+   Exit: (8) male(fred) ? creep
+X = fred.
+```
+
 
 
 ### Consulta com busca em regra
 
 
-Agora vamos ver outra consulta, desta vez com o predicado father.
-Queremos saber quem é o pai X de bart.
+Agora vamos ver outra consulta, desta vez com o predicado `father`, definido com uma regra (com condições). Queremos saber quem é o pai `X` de `bart`.
 
-- Regra: father
+- Consulta: `father(X,bart).`
+- Regra: `father`, com 2 condições
 - Fail: não encontrou o que estava procurando
 - Redo: refaz a busca por outro ramo (backtrack)
 
-(busca alternativa com backtracking é automática aqui, sem necessidade de forçar com ";")
+> busca alternativa com backtracking é automática aqui, sem necessidade de forçar com ";"
+
+```
+?- trace.
+true.
+
+[trace]  ?- father(X,bart).
+   Call: (8) father(_4066, bart) ? creep
+   Call: (9) parent(_4066, bart) ? creep
+   Exit: (9) parent(marge, bart) ? creep
+   Call: (9) male(marge) ? creep
+   Fail: (9) male(marge) ? creep
+   Redo: (9) parent(_4066, bart) ? creep
+   Exit: (9) parent(homer, bart) ? creep
+   Call: (9) male(homer) ? creep
+   Exit: (9) male(homer) ? creep
+   Exit: (8) father(homer, bart) ? creep
+X = homer.
+```
+
+### Consulta sem/com corte (cut, !)
+
+Vejamos agora uma consulta com o predicado `son`, também definido com uma regra (com condições). Queremos saber quem são os filhos (ou filho) `F` de `marge`.
+
+- Consulta: `son(F,marge).`
+- Regra: `son`, com 2 condições
+- Após o primeiro resultado, usamos ";" para forçar backtracking
+- Havia outras opções para a condição `parent`, mas nenhuma é verdadeira para a condição `male`, então ambas falham e o resultado é `false`
+
+```
+?- trace,son(X,marge).
+   Call: (11) son(_21556, marge) ? creep
+   Call: (12) parent(marge, _21556) ? creep
+   Exit: (12) parent(marge, bart) ? creep
+   Call: (12) male(bart) ? creep
+   Exit: (12) male(bart) ? creep
+   Exit: (11) son(bart, marge) ? creep
+X = bart ;
+   Redo: (12) parent(marge, _21556) ? creep
+   Exit: (12) parent(marge, lisa) ? creep
+   Call: (12) male(lisa) ? creep
+   Fail: (12) male(lisa) ? creep
+   Redo: (12) parent(marge, _21556) ? creep
+   Exit: (12) parent(marge, maggie) ? creep
+   Call: (12) male(maggie) ? creep
+   Fail: (12) male(maggie) ? creep
+   Fail: (11) son(_21556, marge) ? creep
+false.
+```
+
+#### Com corte
+
+Agora usando `!` (cut/corte)
+
+- Após o primeiro resultado, execução da consulta termina
+- Ou seja, backtracking é impedido
+
+```
+[trace]  ?- trace,son(X,marge),!.
+   Call: (11) son(_36126, marge) ? creep
+   Call: (12) parent(marge, _36126) ? creep
+   Exit: (12) parent(marge, bart) ? creep
+   Call: (12) male(bart) ? creep
+   Exit: (12) male(bart) ? creep
+   Exit: (11) son(bart, marge) ? creep
+X = bart.
+```
 
 
+## Regras recursivas com listas
+
+A seguir, veja o passo-a-passo da execução de alguns predicados recursivos com listas
+
+### Tamanho da lista
+
+Predicado recursivo para encontrar o tamanho de uma lista (equivalente a `length`, mas tenos que usar outro nome para não conflitar)
+
+``` prolog
+tamanho([], 0).
+tamanho([_|T], N) :-
+  tamanho(T, X),
+  N is X + 1.
+```
+
+
+```
+?- trace.
+true.
+
+[trace]  ?- tamanho([a,b,c],X).
+   Call: (8) tamanho([a, b, c], _3896) ? creep
+   Call: (9) tamanho([b, c], _4138) ? creep
+   Call: (10) tamanho([c], _4138) ? creep
+   Call: (11) tamanho([], _4138) ? creep
+   Exit: (11) tamanho([], 0) ? creep
+   Call: (11) _4142 is 0+1 ? creep
+   Exit: (11) 1 is 0+1 ? creep
+   Exit: (10) tamanho([c], 1) ? creep
+   Call: (10) _4148 is 1+1 ? creep
+   Exit: (10) 2 is 1+1 ? creep
+   Exit: (9) tamanho([b, c], 2) ? creep
+   Call: (9) _3896 is 2+1 ? creep
+   Exit: (9) 3 is 2+1 ? creep
+   Exit: (8) tamanho([a, b, c], 3) ? creep
+X = 3.
+```
+
+### Somatório de elementos da lista
+
+Predicado recursivo para encontrar o somatório de elementos de uma lista
+
+> Faça o passo-a-passo no SWI-Prolog!
+
+Primeira versão: 2 predicados com variável L
+
+``` prolog
+sumv1(L,S) :-
+  L = [],
+  S = 0.
+
+sumv1(L, S) :-
+  L = [H|T],
+  sumv1(T, S1),
+  S is H + S1.
+```
+
+Segunda versão: predicados que facilitam a unificação com listas (sintaxe [H|T])
+
+```
+sumv2([],0).
+
+sumv2([H|T], S) :-
+   sumv2(T, S1),
+   S is H + S1.   
+```   
+
+
+## Prática
+
+Prática `prolog03` no Repl.it:
+
+- Faça login em sua conta no Repl.it (a mesma usada em todas as outras práticas)
+- Acesse o menu Teams e clique na prática `prolog03`
+- Não há nada a ser entregue (Submit) no Repl.it (a participação será verificada pela criação do seu Repl.it desta prática, quando você clicar em "Start working")
+
+### 01-simpsons-flintstones.pl
+
+1. Analise o código e responda sem executá-lo: qual das consultas a seguir retorna as filhas de `marge`?
+
+   - a) `daughter(marge,X).`
+   - b) `daughter(X,marge).`
+
+2. Execute passo-a-passo as consultas. Em qual delas ocorre backtracking?
+
+### 02-students.pl
+
+1. Que consulta você pode executar para descobrir a idade de cada um dos estudantes de `biology`?
+
+2. Por que esta consulta vai dar erro: `mean_age(math,X)`?
+
+3. O erro acima pode ser corrigido se você acrescentar uma linha ao predicado `mean_age`. Qual seria ela?
+
+
+### 03-list-members.pl
+
+1. Qual dos predicados retornará sempre `false`? Por quê?
+
+2. Explique a diferença na execução passo-a-passo destas consultas:
+
+   - a) `example1(S).` e
+   - b) `example1(S),!.`
+
+### 04-list-recursion.pl
+
+1. Compare a execução passo-a-passo de `sumv1([1,2,3],L)` e `sumv2([1,2,3],L)`. O que você observa de semelhante/diferente?
+
+2. Por que a consulta `tamanho(ab,L).` retorna `false` ?
+
+### 05-factorial.pl
+
+
+1. Execute a consulta `factv1(3,N).` e use `;` após a resposta. Isso deve gerar um erro. Você consegue identificar o motivo deste erro?
+
+2. Por que este erro não acontece na consulta `factv2(3,N).`?
+
+3. Você consegue identificar alguma vantagem de `factv2` sobre `factv3`?
 
 
 ## Bibliografia
