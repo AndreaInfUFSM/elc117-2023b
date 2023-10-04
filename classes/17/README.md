@@ -337,7 +337,7 @@ Conceitos básicos:
 
 **Encapsulamento** é a junção de dados (variáveis/propriedades/atributos/estado) e operações (funções/métodos/comportamento) em uma mesma unidade, com proteção/limitação de acesso. 
 
-![Fonte: www.c-sharpcorner.com/UploadFile/e881fb/learn-object-oriented-programming-using-C-Sharp-part-5/](img/encapsulation.png)
+![Imagem de um medicamento em formato de cápsula, para ilustrar o conceito de encapsulamento. A cápsula envolve um conteúdo que fica "escondido" e só é "exposto" quando necessário. Fonte: www.c-sharpcorner.com/UploadFile/e881fb/learn-object-oriented-programming-using-C-Sharp-part-5/](img/encapsulation.png)
 
 Fonte: http://www.c-sharpcorner.com
 
@@ -682,6 +682,8 @@ Para responder a essas questões, você deverá criar uma classe em Java à sua 
 Você deve entregar esta parte em um arquivo .java com o mesmo nome da classe. Por exemplo, se a classe fosse `Circle`, o arquivo seria `Circle.java`. 
 
 Compile seu código no Shell usando `javac`. Por exemplo:  `javac Circle.java`
+
+> Atenção! Certifique-se de sempre compilar o código que for modificado. Na dúvida, delete os arquivos .class anteriores (no Shell: `rm *.class`). Mais adiante veremos como automatizar isso.
 
 ### Teste sua classe
 
