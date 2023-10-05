@@ -344,7 +344,7 @@ Fonte: http://www.c-sharpcorner.com
 Por quê?
 
 - Organizar código de forma consistente (reunir dados e operações relacionados favorece manutenção, compreensão)
-- Oferecer interface para (re)uso independente de detalhes internos (deta;hes não são expostos desnecessariamente)
+- Oferecer interface para (re)uso independente de detalhes internos (detalhes não são expostos desnecessariamente)
 
 ### Classe
 
@@ -374,7 +374,7 @@ Onde:
 
 #### C versus Java
 
-Tipo abstrado de dado (TAD) em C:
+Tipo abstrado de dado (TAD) em C (possivelmente em arquivos diferentes):
 
 ``` c
 typedef struct {
@@ -537,7 +537,7 @@ c.area();
 ### Construtores
 
 - Um **construtor** é um código que inicializa um objeto.
-- São geralmente chamados de forma implícita na criação do objeto.
+- São chamados na criação do objeto.
 
 
 Sintaxe em Java:
@@ -545,6 +545,8 @@ Sintaxe em Java:
 - Mesmo nome da classe
 - Sem tipo de retorno
 - Podem existir vários, diferenciados pelos tipos dos argumentos
+
+Exemplo de classe com construtor:
 
 ``` java
 class Circle {
@@ -558,6 +560,19 @@ class Circle {
 
   public double area() {
     return 3.1416 * r * r;
+  }
+}
+```
+
+Construtor chamado na criação do objeto:
+
+
+``` java
+class TestCircle {
+  public static void main(String[] args) {
+    // construtor chamado aqui
+    Circle c = new Circle(); 
+    System.out.println(c.area());    
   }
 }
 ```
