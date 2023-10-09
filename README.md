@@ -14,6 +14,7 @@ Classes
 - [13](https://liascript.github.io/nightly/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/13/README.md)
 - [16](https://liascript.github.io/nightly/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/16/README.md)
 - [17](https://liascript.github.io/nightly/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/17/README.md)
+- [18](https://liascript.github.io/nightly/?https://raw.githubusercontent.com/AndreaInfUFSM/elc117-2023b/master/classes/18/README.md)
 
 
 Projects
