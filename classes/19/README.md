@@ -341,7 +341,7 @@ Conceitos básicos:
 - Interseção com engenharia de software: modelagem de software com UML (Unified Modeling Language)
 
   - na Wikipedia: https://en.wikipedia.org/wiki/Unified_Modeling_Language
-  - esoecificação oficial: https://www.omg.org/spec/UML/
+  - especificação oficial: https://www.omg.org/spec/UML/
 
 - Diagramas de classe descrevem a estrutura de um software graficamente
 
@@ -606,12 +606,52 @@ Faça o teste:
 
 ## Herança no "mundo real"!
 
+Avance para ver alguns links que ilustram herança em códigos do "mundo real" 
+
+### Em documentação
+
 - Hierarquia de classes do pacote `javax.swing` para criação de interfaces gráficas para desktop: https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/package-tree.html
 - Hierarquia de classes do framework Spring Boot para aplicações web (backend): https://docs.spring.io/spring-boot/docs/current/api/overview-tree.html
 
 O que há em comum?
 
 > Em Java, todas as classes derivam implicitamente da classe `Object` !
+
+### Em games de Paradigmas
+
+Guillotine Clicker
+
+- https://pinhalgrandense.itch.io/guillotineclicker
+- https://github.com/elc117/t4-2022a-flavio_gregori_matheus
+- https://github.com/elc117/t4-2022a-flavio_gregori_matheus/blob/main/core/src/com/mygdx/game/GuillotineClicker.java
+
+Jonas vs Arcana Invaders
+
+- https://guglis.itch.io/jonas-vs-arcana-invaders
+- https://github.com/elc117/Jonas-Vs-Arcana-Invaders
+- https://github.com/elc117/Jonas-Vs-Arcana-Invaders/blob/main/core/src/com/uga/game/JonasVsArcanaInvaders.java
+
+
+UFSM Rock Star
+
+- https://henrique-krever.itch.io/ufsm-rockstar
+- https://github.com/elc117/2021gamet4-nos-temos-o-nata
+- https://github.com/elc117/2021gamet4-nos-temos-o-nata/blob/main/core/src/com/ufsm/rockstar/UfsmRockstar.java
+
+Syrene
+
+- https://alegz.itch.io/syrene
+- https://github.com/elc117/game-Alexandre-ChagasBrites
+- https://github.com/elc117/game-Alexandre-ChagasBrites/blob/master/core/src/com/alegz/mermaid/physics/BoxCollider.java
+- https://github.com/elc117/game-Alexandre-ChagasBrites/blob/master/core/src/com/alegz/mermaid/physics/CircleCollider.java
+
+
+Encontre mais jogos em:
+
+- https://itch.io/jam/games-paradigmas-programacao-ufsm-2020a
+- https://itch.io/jam/games-paradigmas-programacao-ufsm-2021a
+- https://itch.io/jam/games-paradigmas-programacao-ufsm-2022a
+
 
 
 ## Bibliografia
