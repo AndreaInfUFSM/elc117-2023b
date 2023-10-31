@@ -419,7 +419,7 @@ public class Main {
 
 Python Tutor: Online Compiler, Visual Debugger, and AI Tutor for Python, Java, C, C++, and JavaScript 
 
-Execute o código passo-a-passo neste [link](https://pythontutor.com/render.html#code=class%20Person%20%7B%0A%20%20private%20String%20name%3B%0A%20%20public%20Person%28%29%20%7B%20%20%20%20%0A%20%20%20%20this.name%20%3D%20%22empty%20name%22%3B%0A%20%20%20%20System.out.println%28%22Person%20constructor%22%29%3B%0A%20%20%7D%0A%20%20public%20String%20getName%28%29%20%7B%0A%20%20%20%20return%20this.name%3B%0A%20%20%7D%0A%7D%0Aclass%20Student%20extends%20Person%20%7B%0A%20%20private%20String%20course%3B%0A%20%20public%20Student%28%29%20%7B%20%20%20%20%0A%20%20%20%20this.course%20%3D%20%22default%20course%22%3B%0A%20%20%20%20System.out.println%28%22Student%20constructor%22%29%3B%0A%20%20%7D%0A%7D%0Apublic%20class%20Main%20%7B%0A%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20Person%20p%20%3D%20new%20Person%28%29%3B%0A%20%20%20%20Student%20s%20%3D%20new%20Student%28%29%3B%0A%20%20%20%20System.out.println%28s.getName%28%29%29%3B%0A%20%20%7D%0A%7D&cumulative=false&curInstr=17&heapPrimitives=true&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false)
+Execute o código passo-a-passo neste [link](https://pythontutor.com/visualize.html#code=class%20Person%20%7B%0A%20%20private%20String%20name%3B%0A%20%20public%20Person%28%29%20%7B%20%20%20%20%0A%20%20%20%20this.name%20%3D%20%22empty%20name%22%3B%0A%20%20%20%20System.out.println%28%22Person%20constructor%22%29%3B%0A%20%20%7D%0A%20%20public%20String%20getName%28%29%20%7B%0A%20%20%20%20return%20this.name%3B%0A%20%20%7D%0A%7D%0Aclass%20Student%20extends%20Person%20%7B%0A%20%20private%20String%20course%3B%0A%20%20public%20Student%28%29%20%7B%20%20%20%20%0A%20%20%20%20this.course%20%3D%20%22default%20course%22%3B%0A%20%20%20%20System.out.println%28%22Student%20constructor%22%29%3B%0A%20%20%7D%0A%7D%0Apublic%20class%20Main%20%7B%0A%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20Person%20p%20%3D%20new%20Person%28%29%3B%0A%20%20%20%20Student%20s%20%3D%20new%20Student%28%29%3B%0A%20%20%20%20System.out.println%28s.getName%28%29%29%3B%0A%20%20%7D%0A%7D&cumulative=false&heapPrimitives=true&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false)
 
 
 ### Exemplo com `super`
@@ -432,7 +432,7 @@ Palavra-chave `super` deve ser seguida de `(` ou de `.`:
 
 No código abaixo, construtor de Student invoca construtor de Person usando `super(`
 
-Execute o código passo-a-passo neste [link](https://pythontutor.com/render.html#code=class%20Person%20%7B%0A%20%20protected%20String%20name%3B%0A%20%20public%20Person%28%29%20%7B%20%20%20%20%0A%20%20%20%20this.name%20%3D%20%22empty%20name%22%3B%0A%20%20%20%20System.out.println%28%22Person%20constructor%201%22%29%3B%0A%20%20%7D%0A%20%20public%20Person%28String%20name%29%20%7B%20%20%20%20%0A%20%20%20%20this.name%20%3D%20name%3B%0A%20%20%20%20System.out.println%28%22Person%20constructor%202%22%29%3B%0A%20%20%7D%0A%20%20public%20String%20getName%28%29%20%7B%0A%20%20%20%20return%20name%3B%0A%20%20%7D%0A%7D%0Aclass%20Student%20extends%20Person%20%7B%0A%20%20private%20String%20course%3B%0A%20%20public%20Student%28%29%20%7B%20%20%20%20%0A%20%20%20%20course%20%3D%20%22default%20course%22%3B%0A%20%20%20%20System.out.println%28%22Student%20constructor%201%22%29%3B%0A%20%20%7D%0A%20%20public%20Student%28String%20name%29%20%7B%0A%20%20%20%20super%28name%29%3B%20%20%20%20%0A%20%20%20%20course%20%3D%20%22default%20course%22%3B%0A%20%20%20%20System.out.println%28%22Student%20constructor%202%22%29%3B%0A%20%20%7D%0A%7D%0Apublic%20class%20Main%20%7B%0A%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20Person%20p%20%3D%20new%20Person%28%22Alice%22%29%3B%0A%20%20%20%20Student%20s%20%3D%20new%20Student%28%22Bob%22%29%3B%0A%20%20%20%20System.out.println%28s.getName%28%29%29%3B%0A%20%20%7D%0A%7D&cumulative=false&curInstr=17&heapPrimitives=true&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false)
+Execute o código passo-a-passo neste [link](https://pythontutor.com/visualize.html#code=class%20Person%20%7B%0A%20%20protected%20String%20name%3B%0A%20%20public%20Person%28%29%20%7B%20%20%20%20%0A%20%20%20%20this.name%20%3D%20%22empty%20name%22%3B%0A%20%20%20%20System.out.println%28%22Person%20constructor%201%22%29%3B%0A%20%20%7D%0A%20%20public%20Person%28String%20name%29%20%7B%20%20%20%20%0A%20%20%20%20this.name%20%3D%20name%3B%0A%20%20%20%20System.out.println%28%22Person%20constructor%202%22%29%3B%0A%20%20%7D%0A%20%20public%20String%20getName%28%29%20%7B%0A%20%20%20%20return%20name%3B%0A%20%20%7D%0A%7D%0Aclass%20Student%20extends%20Person%20%7B%0A%20%20private%20String%20course%3B%0A%20%20public%20Student%28%29%20%7B%20%20%20%20%0A%20%20%20%20course%20%3D%20%22default%20course%22%3B%0A%20%20%20%20System.out.println%28%22Student%20constructor%201%22%29%3B%0A%20%20%7D%0A%20%20public%20Student%28String%20name%29%20%7B%0A%20%20%20%20super%28name%29%3B%20%20%20%20%0A%20%20%20%20course%20%3D%20%22default%20course%22%3B%0A%20%20%20%20System.out.println%28%22Student%20constructor%202%22%29%3B%0A%20%20%7D%0A%7D%0Apublic%20class%20Main%20%7B%0A%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20Person%20p%20%3D%20new%20Person%28%22Alice%22%29%3B%0A%20%20%20%20Student%20s%20%3D%20new%20Student%28%22Bob%22%29%3B%0A%20%20%20%20System.out.println%28s.getName%28%29%29%3B%0A%20%20%7D%0A%7D&cumulative=false&heapPrimitives=true&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false)
 
 ``` java
 class Person {
@@ -488,7 +488,7 @@ Sobrescrita (*override*):
 - Sobrescrita de `toString()` é muito comum, mas podemos sobrescrever qualquer outro método
 - Sobrescrita habilita **polimorfismo** 
 
-Execute o código passo-a-passo neste [link](https://pythontutor.com/render.html#code=class%20Person%20%7B%0A%20%20protected%20String%20name%3B%0A%20%20public%20Person%28%29%20%7B%20%20%20%20%0A%20%20%20%20this.name%20%3D%20%22empty%20name%22%3B%20%20%20%20%0A%20%20%7D%0A%20%20public%20String%20getName%28%29%20%7B%0A%20%20%20%20return%20this.name%3B%0A%20%20%7D%0A%20%20public%20String%20toString%28%29%20%7B%0A%20%20%20%20return%20%22%28%22%20%2B%20this.name%20%2B%20%22%29%22%3B%0A%20%20%7D%0A%7D%0Aclass%20Student%20extends%20Person%20%7B%0A%20%20private%20String%20course%3B%0A%20%20public%20Student%28%29%20%7B%20%20%20%20%0A%20%20%20%20this.course%20%3D%20%22default%20course%22%3B%0A%20%20%7D%0A%20%20public%20String%20toString%28%29%20%7B%0A%20%20%20%20return%20%22%28%22%20%2B%20this.name%20%2B%20%22,%22%20%2B%20this.course%20%2B%20%22%29%22%3B%0A%20%20%7D%0A%7D%0Apublic%20class%20Main%20%7B%0A%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20Person%20p%20%3D%20new%20Person%28%29%3B%0A%20%20%20%20Student%20s%20%3D%20new%20Student%28%29%3B%0A%20%20%20%20System.out.println%28p%29%3B%0A%20%20%20%20System.out.println%28s%29%3B%0A%20%20%7D%0A%7D&cumulative=false&curInstr=17&heapPrimitives=true&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false)
+Execute o código passo-a-passo neste [link](https://pythontutor.com/visualize.html#code=class%20Person%20%7B%0A%20%20protected%20String%20name%3B%0A%20%20public%20Person%28%29%20%7B%20%20%20%20%0A%20%20%20%20this.name%20%3D%20%22empty%20name%22%3B%20%20%20%20%0A%20%20%7D%0A%20%20public%20String%20getName%28%29%20%7B%0A%20%20%20%20return%20this.name%3B%0A%20%20%7D%0A%20%20public%20String%20toString%28%29%20%7B%0A%20%20%20%20return%20%22%28%22%20%2B%20this.name%20%2B%20%22%29%22%3B%0A%20%20%7D%0A%7D%0Aclass%20Student%20extends%20Person%20%7B%0A%20%20private%20String%20course%3B%0A%20%20public%20Student%28%29%20%7B%20%20%20%20%0A%20%20%20%20this.course%20%3D%20%22default%20course%22%3B%0A%20%20%7D%0A%20%20public%20String%20toString%28%29%20%7B%0A%20%20%20%20return%20%22%28%22%20%2B%20this.name%20%2B%20%22,%22%20%2B%20this.course%20%2B%20%22%29%22%3B%0A%20%20%7D%0A%7D%0Apublic%20class%20Main%20%7B%0A%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20Person%20p%20%3D%20new%20Person%28%29%3B%0A%20%20%20%20Student%20s%20%3D%20new%20Student%28%29%3B%0A%20%20%20%20System.out.println%28p%29%3B%0A%20%20%20%20System.out.println%28s%29%3B%0A%20%20%7D%0A%7D&cumulative=false&heapPrimitives=true&mode=edit&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false)
 
 ``` java
 class Person {
@@ -569,6 +569,24 @@ Exemplo com herança e polimorfismo dinâmico (*override* do método `desenha`):
 
 @[load.java](src/polymorphism/Main.java)
 
+
+
+
+### Quiz
+
+1. Qual será a saída do código abaixo?
+
+   - [( )] `empty name`
+   - [( )] `I'm a Person`
+   - [(x)] `I'm a Student`
+
+2. Se trocarmos a linha `p = s` por `s = p`, o código irá compilar sem erro ?
+
+   - [( )] Sim
+   - [(x)] Não
+
+
+@[load.java](src/quiz/Main.java)
 
 
 ### Vantagens?
@@ -694,6 +712,36 @@ implements List<E>, Deque<E>, Cloneable, Serializable
 
 Mais recursos do pacote java.util:
 https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/package-summary.html
+
+
+
+
+### Exemplo em com.badlogic.gdx
+
+- libGDX: open-source, cross-platform Java game development framework 
+- classes abstratas oferecem uma base para criação de games
+- jogos são classes concretas que especializam e preenchem as classes abstratas
+
+Classe abstrata: https://github.com/libgdx/libgdx/blob/master/gdx/src/com/badlogic/gdx/Game.java
+
+``` java
+public abstract class Game
+implements ApplicationListener
+```
+
+Exemplo de classe concreta: https://github.com/elc117/t4-2022a-flavio_gregori_matheus/blob/main/core/src/com/mygdx/game/GuillotineClicker.java
+
+
+``` java
+public class GuillotineClicker 
+extends Game
+```
+
+``
+
+Mais recursos do pacote: https://javadoc.io/doc/com.badlogicgames.gdx
+
+
 
 
 
