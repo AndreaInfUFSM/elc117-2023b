@@ -339,14 +339,14 @@ https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfU
 
 ## Algo em comum?
 
-Alguns exemplos de software com código aberto...
+Avance para ver alguns exemplos de software com código aberto...
 
 > O que será que eles têm em comum?
 
 ### RoboCode
 
 
-> Robocode is a programming game, where the goal is to develop a robot battle tank to battle against other tanks in Java. The robot battles are running in real-time and on-screen. "Build the best, destroy the rest". 
+>*"Robocode is a programming game, where the goal is to develop a robot battle tank to battle against other tanks in Java. The robot battles are running in real-time and on-screen." "Build the best, destroy the rest"*. 
 
 Documentação e código:
 
@@ -354,7 +354,7 @@ Documentação e código:
 - https://github.com/robo-code/robocode
 
 
-![](img/Selection_011.png)
+![Imagem com galeria de vídeos no YouTube sobre Robocode. A galeria tem formato de grid 3x5, reunindo 15 vídeos sobre RoboCode. ](img/Selection_011.png)
 
 
 Um vídeo: https://www.youtube.com/watch?v=8JJqc5-erVM
@@ -374,7 +374,7 @@ Documentação e código:
 - https://spring.io/projects/spring-boot
 - https://github.com/spring-projects/spring-boot
 
-![](img/Selection_013.png)
+![Imagem com galeria de vídeos no YouTube sobre Spring Boot. A galeria tem formato de grid 2x5, reunindo 10 vídeos sobre Spring Boot.](img/Selection_013.png)
 
 
 Muitos vídeos: https://www.youtube.com/hashtag/springboot
@@ -384,11 +384,11 @@ Muitos vídeos: https://www.youtube.com/hashtag/springboot
 
 Execução **sequencial** de tarefas: `main` executa A -> B -> C -> D
 
-![](img/Selection_008.png)
+![Imagem mostrando uma linha do tempo horizontal, representando a execução sequencial de um programa. A linha do tempo avança da esquerda para a direita. Na extremidade da esquerda, temos o nome da subrotina sendo executada (main). Ao longo da linha, temos tarefas A, B, C e D que compõem a subrotina.](img/Selection_008.png)
 
 Execução **concorrente** de tarefas: `main` executa A -> C e `sub` executa B -> D
 
-![](img/Selection_009.png)
+![Imagem mostrando 2 linhas do tempo horizontais, uma acima da outra, representando a execução concorrente de um programa composto por 2 subrotinas independentes. A primeira subrotina (main), no topo da imagem, executa as tarefas A e C. A segunda subrotina (sub), abaixo da primeira, executa as tarefas B e D.](img/Selection_009.png)
 
 
 
@@ -410,7 +410,7 @@ Book: David Watt. Programming Language Design Concepts. Wiley, 2004.
 
 > *"Concurrent programs are able to carry out more than one operation at a time."*
 
-![](img/Selection_009.png)
+![Mesma imagem do slide anterior. Imagem mostrando 2 linhas do tempo horizontais, uma acima da outra, representando a execução concorrente de um programa composto por 2 subrotinas independentes. A primeira subrotina (main), no topo da imagem, executa as tarefas A e C. A segunda subrotina (sub), abaixo da primeira, executa as tarefas B e D.](img/Selection_009.png)
 
 
 
@@ -430,7 +430,7 @@ Book: David Watt. Programming Language Design Concepts. Wiley, 2004.
   - *"A concurrent program, on the other hand, is likely to be genuinely nondeterministic [...]. That is to say, we cannot predict either the sequence of steps that it takes or its final outcome"*. (Watt, 2004)
   - necessário garantir resultados corretos mesmo diante de não-determinismo
 
-![](img/Selection_009.png)
+![Mesma imagem do slide anterior. Imagem mostrando 2 linhas do tempo horizontais, uma acima da outra, representando a execução concorrente de um programa composto por 2 subrotinas independentes. A primeira subrotina (main), no topo da imagem, executa as tarefas A e C. A segunda subrotina (sub), abaixo da primeira, executa as tarefas B e D.](img/Selection_009.png)
 
 
 ### Concorrência X Paralelismo
@@ -438,16 +438,16 @@ Book: David Watt. Programming Language Design Concepts. Wiley, 2004.
 | Concorrência   | Paralelismo   |
 | :--------- | :--------- |
 | Concorrência lógica (Sebesta, 2018)     | Concorrência física (Sebesta, 2018)     |
-| hardware não importa aqui | hardware é importante aqui |
+| hardware não importa muito aqui | hardware é muito importante aqui |
 | mais de uma tarefa no mesmo intervalo de tempo | mais de uma tarefa no mesmo instante de tempo |
 
 Concorrência
 
-![](img/Selection_009.png)
+![Mesma imagem dos slides anteriores, representando a execução concorrente de um programa composto por 2 subrotinas independentes. Na execução concorrente, em um dado intervalo de tempo, temos mais de uma tarefa executando.](img/Selection_009.png)
 
 Paralelismo
 
-![](img/Selection_010.png)
+![Imagem representando a execução paralela de um prorama composto por 2 subrotinas independentes (chamadas main e sub neste exemplo). Na execução paralela, que depende de paralelismo no hardware/arquitetura, mais de uma tarefa pode executar no mesmo instante de tempo.](img/Selection_010.png)
 
 
 
@@ -455,11 +455,11 @@ Fonte: https://developer.ibm.com/tutorials/reactive-in-practice-4/
 
 Concorrência: um "dealer" empilhando dois montes de cartas em um intervalo de tempo
 
-![](img/concurrency.jpg)
+![Imagem de um tutorial da IBM, ilustrando concorrência no contexto de um jogo de cartas em um cassino. O "dealer"/crupiê distribui 2 montes de cartas concorrentemente, adicionando uma carta em cada monte de cada vez. O "dealer" é análogo a uma CPU.](img/concurrency.jpg)
 
 Paralelismo: dois "dealers" empilhando dois montes de cartas ao mesmo tempo
 
-![](img/parallelism.jpg)
+![Imagem do mesmo tutorial da IBM, ilustrando paralelismo no mesmo contexto de jogo de cartas. Agora temos 2 "dealers" que trabalham ao mesmo tempo. Cada um distribui um monte de cartas, portanto 2 montes são construídos ao mesmo tempo, em paralelo.](img/parallelism.jpg)
 
 ## Para quê? 
 
@@ -482,7 +482,7 @@ Muitas alternativas:
 
 - relação com arquiteturas e sistemas operacionais
 - bibliotecas e linguagens
-- threads, coroutines, channels, futures/promises, ...
+- threads, executors, coroutines, channels, futures/promises, ...
 
 Básico: **threads**
 
@@ -493,7 +493,7 @@ Básico: **threads**
 - Recursos privados: contadores de programa, variáveis locais
 - Recursos compartilhados
 
-![](img/4_01_ThreadDiagram.jpg)
+![Diagrama extraído de um livro de Sistemas Operacionais, comparando um processo "single-threaded" com um processo "multithreaded". Ambos os processos têm recursos (code, data, files) que são comuns às threads. O processo "single-threaded" tem apenas um fluxo de execução, enquanto o processo "multithreaded" tem 3 fluxos de execução, neste exemplo. Cada thread dispõe de seus próprios registradores e pilhas.](img/4_01_ThreadDiagram.jpg)
 
 Fonte: Abraham Silberschatz, Greg Gagne, and Peter Baer Galvin, "Operating System Concepts, Ninth Edition ", Chapter 4 
 
@@ -511,11 +511,11 @@ Independente de linguagem:
 
 O que será que exemplos tão diferentes têm em comum?
 
-Em https://github.com/robo-code/robocode/tree/master/robocode.host/src/main/java/net/sf/robocode/host
+Em [RoboCode](https://github.com/robo-code/robocode/tree/master/robocode.host/src/main/java/net/sf/robocode/host):
 
 - https://github.com/robo-code/robocode/blob/master/robocode.api/src/main/java/robocode/_RobotBase.java
 
-Em https://github.com/spring-projects/spring-boot/tree/main/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/web/embedded
+Em [Spring Boot](https://github.com/spring-projects/spring-boot/tree/main/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/web/embedded) (servidor Web embutido):
 
 - https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/web/embedded/tomcat/TomcatWebServer.java
 
@@ -568,7 +568,7 @@ class ThreadApp {
 
 ### Método start
 
-![](img/Selection_014.png)
+![Imagem ilustrando o funcionamento do método start em Java. A imagem tem 3 linhas do tempo horizontais, representando threads main, t1 e t2. Inicialmente, em main, é executado com t1.start(). Isso faz com que t1 passe a executar suas tarefas concorrentemente com main. As tarefas de t1 são A e B, que fazem parte do método run de t1. Após t1.start(), é executado t2.start() em main. Isso faz com que t2 passe também a executar concorrentemente com t1 e main. As tarefas de t2 são C e D, que fazem parte do método run de t2. ](img/Selection_014.png)
 
 ``` java
 class MyThread extends Thread {
@@ -593,7 +593,7 @@ class ThreadApp {
 - Exige tratamento de exceção
 
 
-![](img/Selection_015.png)
+![Imagem ilustrando o funcionamento do método join em Java, com uma linha do tempo semelhante à do slide anterior. Agora, na thread main, as chamadas t1.start() e t2.start() são seguidas de t1.jpin() e t2.join(). Um join faz a thread bloquear, isto é, parar sua execução aguardando o término da execução de outra thread, Ou seja, main espera pelo término de t1 e depois pelo término de t2. O término de t1 ou t2 acontece quando termina o método run() de cada thread.](img/Selection_015.png)
 
 ``` java
 class ThreadApp {
@@ -612,7 +612,7 @@ class ThreadApp {
 }
 ```
 
-### `implements Runnable`
+### Interface: `implements Runnable`
 
 - Objeto que implementa interface Runnable deve ser passado para um objeto Thread para execução de seu método run().
 
@@ -635,6 +635,42 @@ class ThreadApp {
 }
 
 ```
+
+## Prática
+
+Prática java05 no Repl.it:
+
+- Faça login em sua conta no Repl.it 
+- Acesse o menu Teams e clique na prática java05
+- Siga as instruções a seguir
+
+
+### ThreadRace
+
+- No Repl.it da prática java05, visualize o código do programa ThreadRace.java.
+
+- Observe que este programa cria 2 threads concorrentes que representam animais em uma corrida: Rabbit e Turtle. O programa usa `extends Thread` e `implements Runnable`, conforme explicado nesta aula.
+
+- Compile o programa ThreadRace.java no Shell do Repl.it. 
+
+- Execute o programa mais de uma vez, observando as saídas. Você conseguiu notar o não-determinismo característico da execução concorrente?
+
+
+### AnotherThreadRace
+
+- Copie o programa ThreadRace.java para um arquivo nomeado AnotherThreadRace.java e renomeie a classe principal para AnotherThreadRace. 
+
+- Acrescente uma terceira classe de animal à corrida e ajuste o método main para executar o novo animal em uma nova thread. Para isso, você poderá criar uma classe derivada de Thread (como Rabbit) ou implementar a interface Runnable (como Turtle).
+
+
+
+### BetterThreadRace
+
+- Observe que os métodos run() são muito semelhantes no código fornecido. Ou seja, há redundâncias nas classes dos animais, o que é indesejável. 
+
+- Resolva este problema criando um novo programa em um arquivo BetterThreadRace.java, contendo uma classe base AnimalRunner, da qual serão derivadas as 3 classes de animais. Faça as modificações necessárias para que o novo programa funcione como o anterior.
+
+
 
 ## Bibliografia
 
