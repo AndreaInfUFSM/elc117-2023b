@@ -668,7 +668,9 @@ Prática java05 no Repl.it:
 
 - Observe que os métodos run() são muito semelhantes no código fornecido. Ou seja, há redundâncias nas classes dos animais, o que é indesejável. 
 
-- Resolva este problema criando um novo programa em um arquivo BetterThreadRace.java, contendo uma classe base AnimalRunner, da qual serão derivadas as 3 classes de animais. Faça as modificações necessárias para que o novo programa funcione como o anterior.
+- Resolva este problema criando um novo programa em um arquivo BetterThreadRace.java, contendo uma classe base (super-classe) AnimalRunner, da qual serão derivadas as 3 classes de animais. Faça as modificações necessárias para que o novo programa funcione como o anterior.
+
+- Extra: pesquise sobre **lambda expressions** e **functional interfaces** em Java, para abreviar o código que especifica o que as threads irão executar. Isso é programação funcional, do jeito Java :-)
 
 
 
