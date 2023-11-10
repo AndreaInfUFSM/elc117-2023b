@@ -75,7 +75,7 @@ Este projeto tem como objetivos:
 
 - Para ambientação com Git e GitHub, faça login no GitHub e use este link para entrar no GitHub Classroom da disciplina: https://classroom.github.com/a/_YZ1epQv (seu usuário no GitHub será vinculado a um nome matriculado na disciplina e será criado um repositório para você fazer testes no GitHub).
 
-- Para criar o repositório de desenvolvimento do jogo, é recomendável que os integrantes da dupla já estejam minimamente ambientados com o GitHub. Um(a) dos integrantes deverá criar o repositório do grupo clicando neste link e informando um nome para o grupo: https://classroom.github.com/a/TUsa8_pI. O(a) segundo(a) integrante da dupla deverá clicar no mesmo link e selecionar o nome do grupo criado pelo(a) colega.
+- Para criar o repositório de desenvolvimento do jogo, é recomendável que os integrantes da dupla já estejam minimamente ambientados com o GitHub. Um(a) dos integrantes deverá criar o repositório do grupo clicando neste link e informando um nome para o grupo: https://classroom.github.com/a/TUsa8_pI  O(a) segundo(a) integrante da dupla deverá clicar no mesmo link e selecionar o nome do grupo criado pelo(a) colega.
 
 - O repositório deverá ter commits de cada integrante da dupla, distribuídos ao longo do prazo de execução do trabalho. **Não deixe para iniciar o trabalho próximo à data de entrega!**
 
