@@ -7,6 +7,15 @@ body {
   font-family: 'Quattrocento Sans', sans-serif !important;
 }
 
+/* .lia-paragraph {
+  font-size: 28px !important;
+}
+
+.lia-label {
+  font-size: 28px !important;
+} */
+
+
 /* h1.lia-h1 {
   font-size:5vw !important;
   margin-left:auto !important;
@@ -84,24 +93,17 @@ body {
 }
 
 .text-success {
-  font-size: 32px !important;
+  font-size: 54px !important;
   animation: bounce 1s ease-in-out infinite;
 }
 
 .text-error {
-  font-size: 32px !important;
+  font-size: 54px !important;
   animation: wiggle 1s ease-in-out infinite;
 
 }
 
-/* 
-.lia-paragraph {
-  font-size: 28px !important;
-}
 
-.lia-label {
-  font-size: 28px !important;
-} */
 
 
 /* 

@@ -72,7 +72,7 @@ Há muitas distribuições/fornecedores de JDKs: https://sdkman.io/jdks
 
 ## Gerenciadores de projetos Java
 
-- Uma artigo: https://medium.com/javarevisited/manage-your-dependencies-in-java-48fee2ee5333
+- Um artigo: https://medium.com/javarevisited/manage-your-dependencies-in-java-48fee2ee5333
 
 
 - Grandes projetos possuem muitos componentes/dependências, por exemplo:
@@ -116,7 +116,7 @@ Um projeto gerenciado com Gradle: https://github.com/AndreaInfUFSM/java-libgdx-e
 
 ### Configuradores de projetos
 
-Algumas Alternativa para iniciar projeto
+Algumas alternativas para iniciar projeto
 
 - Ferramenta oficial `gdx-setup`: https://libgdx.com/wiki/start/project-generation
 - Ferramenta extra-oficial `gdx-liftoff`: https://github.com/tommyettinger/gdx-liftoff
