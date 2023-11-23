@@ -339,7 +339,7 @@ https://liascript.github.io/course/?https://raw.githubusercontent.com/AndreaInfU
 
 # Revisão
 
-> Relembre tudo que vimos na segunda parte da disciplina... e descubra um pouco mais!
+> Relembre o que vimos na segunda parte da disciplina... 
 
 ## Encapsulamento
 
